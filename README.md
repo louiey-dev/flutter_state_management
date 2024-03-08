@@ -8,10 +8,9 @@ Sample code while study state management
 
 ## Things done
 - state management with stateful
-  
+- state management with provider  
 
 ## Things to do
-- state management with provider
 - state management with getx
 - state management with bloc
 - state management with riverpod
