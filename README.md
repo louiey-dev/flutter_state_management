@@ -14,3 +14,4 @@ Sample code while study state management
 - state management with provider
 - state management with getx
 - state management with bloc
+- state management with riverpod

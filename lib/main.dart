@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_state_management/counter/counter_stateful.dart';
+import 'package:flutter_state_management/counter/counter_screen_provider.dart';
+import 'package:flutter_state_management/counter/counter_screen_stateful.dart';
 import 'package:logger/logger.dart';
 
 Logger logger = Logger();
@@ -42,7 +43,8 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: CounterStateful(),
+      // body: const CounterScreenStateful(),
+      body: const CounterScreenProvider(),
     );
   }
 }
