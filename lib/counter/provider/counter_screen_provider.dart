@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_state_management/counter/counter_provider.dart';
+import 'package:flutter_state_management/counter/provider/counter_provider.dart';
 import 'package:flutter_state_management/counter/counter_screen_ui.dart';
 import 'package:provider/provider.dart';
 

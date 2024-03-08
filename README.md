@@ -8,7 +8,8 @@ Sample code while study state management
 
 ## Things done
 - state management with stateful
-- state management with provider  
+- state management with provider
+- go_router
 
 ## Things to do
 - state management with getx
