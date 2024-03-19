@@ -80,6 +80,24 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: const Text("Go to Provider Screen"),
             ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                // context.goNamed("getx");
+                // context.go('/counter/getx');
+                context.push('/counter/getx');
+              },
+              child: const Text("Go to Getx Screen"),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                // context.goNamed("getx_reactive");
+                // context.go('/counter/getx_reactive');
+                context.push('/counter/getx_reactive');
+              },
+              child: const Text("Go to GetxReactive Screen"),
+            ),
           ],
         ),
       ),
