@@ -21,8 +21,8 @@ class CounterScreenRiverpod extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final counterRead = ref.read(counterStateNotifierProvider.notifier);
-    final counterState = ref.watch(counterStateNotifierProvider);
+    // final counterRead = ref.read(counterStateNotifierProvider.notifier);
+    // final counterState = ref.watch(counterStateNotifierProvider);
 
     final count = ref.read(countProvider);
     final selectCount = ref.read(selectCountProvider);

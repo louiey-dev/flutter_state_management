@@ -8,7 +8,10 @@ import 'package:logger/logger.dart';
 Logger logger = Logger();
 
 void main() {
-  runApp(const MyApp());
+  // runApp(const MyApp());
+  runApp(const ProviderScope(
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -27,21 +30,21 @@ class MyApp extends StatelessWidget {
   //   );
   // }
 
-  // @override
-  // Widget build(BuildContext context) {
-  //   return MaterialApp.router(
-  //     routerConfig: router,
-  //   );
-  // }
-
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: ProviderScope(
-        child: CounterScreenRiverpod(),
-      ),
+    return MaterialApp.router(
+      routerConfig: router,
     );
   }
+
+  // @override
+  // Widget build(BuildContext context) {
+  //   return const MaterialApp(
+  //     home: ProviderScope(
+  //       child: CounterScreenRiverpod(),
+  //     ),
+  //   );
+  // }
 }
 
 class MyHomePage extends StatefulWidget {
