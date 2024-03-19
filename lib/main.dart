@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_state_management/counter/riverpod/counter_screen_riverpod.dart';
 import 'package:flutter_state_management/router.dart';
 import 'package:go_router/go_router.dart';
 import 'package:logger/logger.dart';
@@ -25,10 +27,19 @@ class MyApp extends StatelessWidget {
   //   );
   // }
 
+  // @override
+  // Widget build(BuildContext context) {
+  //   return MaterialApp.router(
+  //     routerConfig: router,
+  //   );
+  // }
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: router,
+    return const MaterialApp(
+      home: ProviderScope(
+        child: CounterScreenRiverpod(),
+      ),
     );
   }
 }
@@ -97,6 +108,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 context.push('/counter/getx_reactive');
               },
               child: const Text("Go to GetxReactive Screen"),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                // context.goNamed("getx_reactive");
+                // context.go('/counter/getx_reactive');
+                context.push('/counter/riverpod');
+              },
+              child: const Text("Go to Riverpod Screen"),
             ),
           ],
         ),
